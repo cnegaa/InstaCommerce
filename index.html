@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <!-- Required meta tags -->
@@ -20,29 +20,33 @@
             <div class="container">
                 <div class="row top-bar">
                     <div class="top-bar_mobile menu-btn">
-                        <nav class="mobile-menu"> <!-- проверка -->
+                        <nav class="mobile-menu d-flex align-items-center justify-content-between">
                             <input type="checkbox" id="checkbox" class="mobile-menu__checkbox"> 
+                            <!-- сделать закладки -->
                             <div class="top-bar_info">
-                                <a href="#">
+                                <a href="account.html" class="header-link">
                                     <i class="fas fa-user-check fa-2x"></i>
                                 </a>
                             </div>
-                            <label for="checkbox" class="mobile-menu__btn">
+                            <label for="checkbox" class="mobile-menu__btn d-flex align-items-center justify-content-center">
                                 <div class="mobile-menu__icon"></div>
                             </label>
-                            <div class="mobile-menu__container">
+                            <div class="mobile-menu__container d-flex align-items-center justify-content-center">
                                 <ul class="mobile-menu__list">
                                     <li class="mobile-menu__item">
-                                        <a href="#" class="mobile-menu__link">Доставка</a>
+                                        <a href="index.html" class="mobile-menu__link">Главная</a>
+                                    </li>                                    
+                                    <li class="mobile-menu__item">
+                                        <a href="delivery.html" class="mobile-menu__link">Доставка</a>
                                     </li>
                                     <li class="mobile-menu__item">
-                                        <a href="#" class="mobile-menu__link">Контакты</a>
+                                        <a href="contacts.html" class="mobile-menu__link">Контакты</a>
                                     </li>
                                     <li class="mobile-menu__item">
-                                        <a href="#" class="mobile-menu__link">Оплата</a>
+                                        <a href="payment.html" class="mobile-menu__link">Оплата</a>
                                     </li>
                                     <li class="mobile-menu__item">
-                                        <a href="#" class="mobile-menu__link">График работы</a>
+                                        <a href="status.html" class="mobile-menu__link">Проверка статуса заказа</a>
                                     </li>
                                 </ul>
                             </div>
@@ -52,24 +56,26 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="mid-bar d-flex justify-content-between">
-                        <div class="col-5">
-                             <div class="mid-bar_logo border d-flex justify-content-center text-center">
-                                @магазин одежды
-                             </div>
+                    <div class="mid-bar d-flex d-flex justify-content-between align-items-center">
+                        <div class="mid-bar_logo">
+                            <a href="#">
+                                <h1>@Магазин одежды</h1>
+                            </a>
                         </div>
-                        <div class="col-3" >
-                            <ul class="mid-bar_stores d-flex justify-content-between">
-                                <li class="mid-bar_tel">
-                                    <a href="#">
-                                        <i class="fas fa-mobile-alt fa-2x"></i>
+                        <div class="mid-bar_main-contacts"></div> <!-- desktop -->
+                        <div class="mid-bar_store-info"></div> <!-- desktop -->
+                        <div class="mid-bar_store-actions col-4">
+                            <ul class="mid-bar_store-actions__list d-flex justify-content-between">
+                                <li class="mid-bar_store-actions__list___item">
+                                    <a href="#" class="header-link">
+                                        <i class="fas fa-phone fa-2x mid-bar_link"></i>
                                     </a>
                                 </li>
-                                <li class="mid-bar_cart">
-                                    <a href="#">
-                                        <i class="fas fa-shopping-cart fa-2x"></i>
-                                     </a>
-                                </li>                      
+                                <li class="mid-bar_store-actions__list___item">
+                                    <a href="#" class="header-link">
+                                        <i class="fas fa-shopping-cart fa-2x mid-bar_link"></i>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -133,23 +139,105 @@
                                     одежда
                                 </a>
                             </li>
-                            <li class="catalog_nav__list___item">
-                                <a href="#">
-                                    одежда
-                                </a>
-                            </li>
-                            <li class="catalog_nav__list___item">
-                                <a href="#">
-                                    одежда
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>                
             </div>
         </div>
+        <div class="container">
+            <ul class="row goods_list"> 
+                <li class="goods_list__item card col-sm-4">
+                    <div class="card_header">
+                        <div class="card_header__status border border-danger">
+                            new
+                        </div>
+                        <a href="#" class="card_header__img">
+                            <img src="img/goods/01.jpeg" class="card-img-top" alt="...">
+                        </a>
+                        <a href="#" class="card_header__text">
+                            <div class="text-center font-weight-bold">
+                                Худи «Спасибо что я у тебя есть», черный-камуфляж
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_info">
+                        <div class="card_info__price">
+                            4500
+                        </div>
+                        <div class="card_info__available d-flex align-items-center justify-content-between col-4">
+                           <i class="fas fa-align-justify"></i>
+                            <div class="card_info__available___text">
+                                предзаказ
+                            </div>
+                        </div>
+                        <a href="card.html">
+                            <button type="button" class="btn btn-outline-dark card_info__btn rounded-pill">
+                                Купить
+                            </button>
+                        </a>
+                    </div>
+                </li> 
+                <li class="goods_list__item card col-sm-4">
+                    <div class="card_header">
+                        <div class="card_header__status border border-danger">
+                            new
+                        </div>
+                        <a href="#" class="card_header__img">
+                            <img src="img/goods/01.jpeg" class="card-img-top" alt="...">
+                        </a>
+                        <a href="#" class="card_header__text">
+                            <div class="text-center font-weight-bold">
+                                Худи «Спасибо что я у тебя есть», черный-камуфляж
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_info">
+                        <div class="card_info__price">
+                            4500
+                        </div>
+                        <div class="card_info__available d-flex align-items-center justify-content-between col-4">
+                           <i class="fas fa-align-justify"></i>
+                            <div>предзаказ</div>
+                        </div>
+                        <a href="card.html">
+                            <button type="button" class="btn btn-outline-dark card_info__btn rounded-pill">
+                                Купить
+                            </button>
+                        </a>
+                    </div>
+                </li>  
+                <li class="goods_list__item card col-sm-4">
+                    <div class="card_header">
+                        <div class="card_header__status border border-danger">
+                            new
+                        </div>
+                        <a href="#" class="card_header__img">
+                            <img src="img/goods/01.jpeg" class="card-img-top" alt="...">
+                        </a>
+                        <a href="#" class="card_header__text">
+                            <div class="text-center font-weight-bold">
+                                Худи «Спасибо что я у тебя есть», черный-камуфляж
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card_info">
+                        <div class="card_info__price">
+                            4500
+                        </div>
+                        <div class="card_info__available d-flex align-items-center justify-content-between col-4">
+                           <i class="fas fa-align-justify"></i>
+                            <div>предзаказ</div>
+                        </div>
+                        <a href="card.html">
+                            <button type="button" class="btn btn-outline-dark card_info__btn rounded-pill">
+                                Купить
+                            </button>
+                        </a>
+                    </div>
+                </li>               
+            </ul>
+        </div>
         <div class="fotter">
-            2345678
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -7,18 +7,18 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	font-size: 12px;
-	color: #ADB6AC;
+	font-size: 13px;
+	color: #000;
 	font-family: 'Roboto Slab', serif;
 }
 
 a {
-	color: #ADB6AC;
+	color: #000;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #fff;
+	color: #ADB6AC;
 	text-decoration: none;
 }
 
@@ -28,121 +28,85 @@ ul, li {
 	padding: 0px;
 }
 
-/*.wrapper {
-	height: 100vh;
-	display: flex;
-	flex-direction:column;
-	justify-content:space-between;
-}*/
+/*top-bar*/ 
 
-.mid-bar {
-	color: #000;
-	margin: 80px 0 20px 0px;
+.top-bar {
+
 }
 
-.top-bar_info a { /*сократить*/
+/*nav*/
+.header-link {
 	color: #fff;
 }
 
-.top-bar_info a:hover { /*сократить*/
-	color: #fff;
+.header-link:hover  {
+	color: #ADB6AC;
 }
-
-
-.mid-bar a {
-	color: #000;
-}
-
-.mid-bar_logo {
-	padding: 3px;
-}
-
-.catalog {
-		padding: 5% 0%;
-}
-
-.catalog_nav__list {
-	flex-wrap: wrap;
-	font-size: 1.1rem;
-}
-
-.catalog_nav__list___item {
-	padding: 0px 5px;
-}
-
-/*toggler*/
 
 .mobile-menu {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  background-color: #000;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  z-index: 9999999;
+	border-bottom: 1px solid #ADB6AC;
+	position: fixed;
+	padding: 0 16px;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	z-index: 9999999;
+	background: #000;
 }
+
 .mobile-menu__btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 30px;
-  cursor: pointer;
-  transition: .4s;
+	position: relative;
+	width: 35px;
+	height: 30px;
+	cursor: pointer;
+	transition: .4s;
 }
 .mobile-menu__icon {
-  display: block;
-  position: relative;
-  background: white;
-  width: 90%;
-  height: 4px;
-  transition: .4s;
+	display: block;
+	position: relative;
+	background: #fff;
+	width: 90%;
+	height: 4px;
+	transition: .4s;
 }
-.mobile-menu__icon::after, .mobile-menu__icon::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: white;
-  width: 100%;
-  height: 4px;
-  transition: .4s;
+.mobile-menu__icon:after, .mobile-menu__icon:before {
+	content: "";
+	display: block;
+	position: absolute;
+	background:#fff;
+	width: 100%;
+	height: 4px;
+	transition: .4s;
 }
 .mobile-menu__icon::after {
-  top: 8px;
+	top: 8px;
 }
 .mobile-menu__icon::before {
-  top: -8px;
+	top: -8px;
 }
 .mobile-menu__container {
-  position: fixed;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 50px;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  height: 0;
-  opacity: 1;
-  transition: .5s;
-  overflow: hidden;
-  background-color: #000;
+	position: fixed;
+	text-align: center;
+	top: 50px;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	height: 0;
+	opacity: 1;
+	transition: .5s;
+	overflow: hidden;
+	background-color: #000;
 }
 .mobile-menu__list {
-  transition: .5s;
-  list-style: none;
-  padding-left: 0;
-  margin-top: -50px;
+	transition: .5s;
+	list-style: none;
+	padding-left: 0;
+	margin-top: -50px;
 }
 .mobile-menu__item {
-  font-size: 26px;
-  padding-bottom: 15px;
+	font-size: 26px;
+	padding-bottom: 15px;
 }
 .mobile-menu__link {
   text-decoration: none;
@@ -170,4 +134,143 @@ ul, li {
 .mobile-menu__checkbox:checked ~ .mobile-menu__btn .mobile-menu__icon::before {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+}
+
+.catalog_nav__list___item a:hover {
+	color: #000;	
+}
+
+/*mid-bar*/
+
+.mid-bar {
+	margin-top: 70px;
+	padding: 0 16px 16px 16px;
+	border-bottom: 1px solid #ADB6AC;
+}
+
+.mid-bar_link {
+	color: #000;
+}
+
+.mid-bar_link:hover{
+	color: #ADB6AC;
+}
+
+/*card*/
+
+.goods_list {
+	padding: 15px;
+}
+
+.goods_list__item {
+	padding: 20px 15px;
+	margin: 10px 0px;
+} 
+
+.card_header__status {
+	top: 3%;
+    left: 3%;
+	position: absolute;
+	color: red;
+	background: #fff;
+	padding: 5px 10px;
+
+}
+
+.card_info__available {
+	color: #189926;
+}
+
+.card_info__btn {
+	background: #000;
+	color: #fff;
+}
+
+.card_info__btn:hover {
+	background: #fff;
+	color: #000;
+}
+
+.text-center {
+	font-size: 1.4em;
+}
+
+.card_info__price {
+	font-size: 2em;
+}
+
+.card_info__btn {
+	margin: 5% 5% 5% 0%;
+}
+
+/*fotter*/
+
+.fotter {
+	background: #000;
+}
+
+/*delivery*/
+
+.title_second, .container__title {
+	font-weight: 600;
+	font-size: 1.2em;
+}
+
+.delivery-cont {
+	color: #000;
+}
+
+.delivery-cont_text__second {
+	color: red;
+}
+
+.delivery-cont_text__title, .delivery-cont_mail, .contacts_title ,.payment_title, .container_title, .account_info__title, .container__title{
+	padding-top: 15%;
+}
+.contacts_info{
+	padding-top: 5%;
+}
+
+.delivery-cont_form__city {
+	font-size: 1.4em;
+}
+
+/*contacts*/
+
+.location {
+	color: #FFBD4B;
+}
+
+.location a {
+	color: #FFBD4B;
+}
+
+.location a:hover{
+	color: #000;
+}
+
+/*.contacts, .payment{
+	color: #000;
+}*/
+
+.contacts_info__par{
+	text-decoration: underline;
+}
+
+.contacts_text-extension {
+	color: red;
+}
+
+/*личный кабинет*/
+
+.account_info__title {
+	text-align: center;
+}
+
+.form-group {
+	padding: 10px 0px;
+}
+
+.account_operations a {
+	border-bottom: 2px solid #000;
 }
