@@ -1,0 +1,43 @@
+@media (min-width: 576px) {
+
+	.bsCollapse {
+		display: block;
+	}
+
+	.footer-logo {
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 10px;
+	}
+
+	.summary_list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	summary-item {
+		padding: 0px 5px;
+	}
+
+	.copuright {
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.summary-item {
+		padding: 0px 5px;
+		flex-wrap: nowrap;
+	}
+
+	.copuright__phone {
+		font-size: 0.9rem;
+	}
+
+	.copuright__logo {
+		width: 70%;
+	}
+
+}
